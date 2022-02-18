@@ -1,4 +1,15 @@
+import { authService } from "fbase";
 import React from "react";
 
-const Home= () => <span>Home</span>;
-export default Home;
+
+export default () => {
+ 
+    const onLogOutClick = () => authService.signOut();
+
+     
+    return (      
+        <>
+        <button onClick= {onLogOutClick} >Log Out</button>
+        </>
+    );
+}
